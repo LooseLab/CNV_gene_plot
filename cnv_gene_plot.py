@@ -14,10 +14,15 @@ from matplotlib.ticker import ScalarFormatter
 @click.option('-g', '--gene_panel_path', default='', help='Gene bed file to choose')
 @click.option('-s', '--sub_gene_path', help='Use file to select genes to display')
 @click.option('-x', '--x_coords', default='', help='Hypen-separated base coordinates to plot for the selected chromosome')
+@click.option('-o', '--output_dir', help='Select output directory')
 
-def read_bam(file_path, chromosome, gene_panel_path, sub_gene_path, x_coords):
+def read_bam(file_path, chromosome, gene_panel_path, sub_gene_path, x_coords, output_dir):
     bam_path = Path(file_path)
     
+    bam_name_suff = os.path.basename(file_path)
+    print(bam_name_suff)
+    bam_name = bam_name_suff.split('.')[0]
+
     if chromosome == 'chrx':
         chromosome = 'chrX'
     if chromosome == 'chry':
@@ -91,12 +96,15 @@ def read_bam(file_path, chromosome, gene_panel_path, sub_gene_path, x_coords):
                         ax.text((start + end) / 2, 5, label, rotation=45, verticalalignment='bottom', fontsize=8, color='red')
 
     if x_coords and gene_panel_path:
-        plt.title(chromosome + ' ' + x_coords, pad=80)
-        
+        plt.title(chromosome + ' ' + x_coords, pad=80)    
     elif x_coords:
         plt.title(chromosome + ' ' + x_coords)
     else:
         plt.title(chromosome, pad=80)
-    fig.savefig("cnv_plot.png")
+    
+    if output_dir: 
+        fig.savefig(f"{output_dir}/{bam_name}_{chromosome}.png")
+    else:
+        fig.savefig(f"{bam_name}_{chromosome}.png")
 if __name__ == '__main__':
     read_bam()
