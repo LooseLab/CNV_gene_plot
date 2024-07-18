@@ -20,7 +20,6 @@ def read_bam(file_path, chromosome, gene_panel_path, sub_gene_path, x_coords, ou
     bam_path = Path(file_path)
     
     bam_name_suff = os.path.basename(file_path)
-    print(bam_name_suff)
     bam_name = bam_name_suff.split('.')[0]
 
     if chromosome == 'chrx':
