@@ -17,7 +17,11 @@ from matplotlib.ticker import ScalarFormatter
 
 def read_bam(file_path, chromosome, gene_panel_path, sub_gene_path, x_coords):
     bam_path = Path(file_path)
-
+    
+    if chromosome == 'chrx':
+        chromosome = 'chrX'
+    if chromosome == 'chry':
+        chromosome = 'chrY'
 
     # Parse the x_coords option
     x_start, x_end = None, None
