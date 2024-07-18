@@ -1,0 +1,7 @@
+pathlib
+numpy
+pandas
+seaborn
+matplotlib
+click
+cnv_from_bam

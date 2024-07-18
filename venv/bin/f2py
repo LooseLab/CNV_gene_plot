@@ -1,4 +1,4 @@
-#!/home/thomas/cnv_from_bam_genes/venv/bin/python3.12
+#!/home/thomas/cnv_from_bam_genes/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
