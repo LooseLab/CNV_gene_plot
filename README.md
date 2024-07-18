@@ -1,3 +1,4 @@
+## Installation
 To initiate a python environment:
 
 ```python -m venv cnv_env```
@@ -10,7 +11,7 @@ Activate environment:
 
 ```source cnv_venv/bin/activate```
 
-
+## Usage
 Usage: ```cnv_gene_plot.py [OPTIONS] path/to/BAM```
 
 
@@ -27,7 +28,7 @@ Options:
                               
   ```--help```                      Show this message and exit.
 
-Examples:
+## Examples
 ```
 # Generates a CNV plot of chromosome 1 from position 10000000 to 20000000
 
