@@ -36,7 +36,7 @@ Options:
 
 
 ## Examples
-```
+```sh
 # Generates a CNV plot of chromosome 1 from position 10000000 to 20000000
 
 python3 cnv_gene_plot.py /home/bam_files/test.bam -c chr4 -x 10000000-20000000
