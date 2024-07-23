@@ -1,3 +1,5 @@
+This tool now includes ruptures changepoint detection using the ```BinSeg``` algorythm, for estimation of CNV breakpoints. Happy detecting.
+
 ## Installation
 To initiate a python environment:
 
