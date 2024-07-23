@@ -14,26 +14,27 @@ Activate environment:
 ```source cnv_venv/bin/activate```
 
 ## Usage
-Usage: ```cnv_gene_plot_ruptures.py [OPTIONS] path/to/BAM```
+```
+Usage: cnv_gene_plot_ruptures.py [OPTIONS] path/to/BAM
 
 
 Options:
 
- ``` -c, --chromosome TEXT ```      Chromosome to plot.
+ -c, --chromosome TEXT     Chromosome to plot.
  
- ``` -g, --gene_panel_path path/to/bed.bed ```  Gene bed file to choose
+ -g, --gene_panel_path path/to/bed.bed  Gene bed file to choose
  
- ``` -s, --sub_gene_path path/to/genes.txt ```   Use file to select genes to display
+ -s, --sub_gene_path path/to/genes.txt   Use file to select genes to display
  
- ``` -x, --x_coords INTEGER-INTEGER ```       Hyphen-separated base coordinates to plot for
+ -x, --x_coords INTEGER-INTEGER     Hyphen-separated base coordinates to plot for
                               the selected chromosome
                               
- ``` -o, --output_file TEXT.pdf ```    Select output PDF file
+ -o, --output_file TEXT.pdf   Select output PDF file
  
- ``` -r, --ruptures ```              Include ruptures changepoint
+ -r, --ruptures             Include ruptures changepoint detection
  
- ``` --help  ```                    Show this message and exit.
-
+  --help                    Show this message and exit.
+```
 
 ## Examples
 ```sh
