@@ -1,4 +1,7 @@
-This tool now includes ruptures changepoint detection using the ```BinSeg``` algorythm, for estimation of CNV breakpoints. Happy detecting.
+This tool now includes ruptures changepoint detection using the ```BinSeg``` algorythm, for estimation of CNV breakpoints. Happy plotting.
+
+The centromeric/acroscentric regions are identified using the t2t-chm13-v1.0 database for GRCh38 found [here.](https://genome.ucsc.edu/cgi-bin/hgTables?db=hub_2395475_t2t-chm13-v1.0&hgta_group=cenTelo&hgta_track=hub_2395475_cenRegions&hgta_table=hub_2395475_cenRegions&hgta_doSchema=describe+table+schema)
+
 
 ## Installation
 To initiate a python environment:
