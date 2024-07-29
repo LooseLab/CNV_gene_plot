@@ -35,6 +35,11 @@ Options:
  -o, --output_file TEXT.pdf   Select output PDF file
  
  -r, --ruptures             Include ruptures changepoint detection
+
+ -m, --method [BinSeg|kernelCPD] Changepoint detection method to use
+
+ -f, --file_list PATH            Path to a .txt file containing a list of BAM
+                                  file paths
  
   --help                    Show this message and exit.
 ```
@@ -49,9 +54,9 @@ python3 cnv_gene_plot.py /home/bam_files/test.bam -c chr4 -x 10000000-20000000
 
 python3 cnv_gene_plot.py /home/thomas/sort_ds1305_Intraop0002_2.htom.bam -c chr4 -g rCNS2_panel_name_uniq.bed 
 
-# Generates a plot of chromosome 1 with selected genes found in select_genes.txt from the rCNS2 panel with ruptures changepoint detection
+# Generates a plot of chromosome 1 with selected genes found in select_genes.txt from the rCNS2 panel with ruptures kernel changepoint detection 
 
-python3 cnv_gene_plot.py /home/thomas/sort_ds1305_Intraop0002_2.htom.bam -c chr1 -g rCNS2_panel_name_uniq.bed -s select_genes.txt -r 
+python3 cnv_gene_plot.py /home/thomas/sort_ds1305_Intraop0002_2.htom.bam -c chr1 -g rCNS2_panel_name_uniq.bed -s select_genes.txt -r -m kernelCPD
 
 ```
 
