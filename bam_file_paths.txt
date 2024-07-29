@@ -1,0 +1,3 @@
+/home/thomas/robin_watchfolder/sort_ds1305_Intraop0002_2.bam
+/home/thomas/sort_ds1305_Intraop0002_2_cp.bam
+
